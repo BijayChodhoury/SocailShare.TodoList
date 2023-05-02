@@ -1,0 +1,24 @@
+@()
+
+@main("Welcome to Play") {
+<h1>PopUp</h1>
+
+<input type="image" src="" value="FB" id="fb_btn" onclick="store(document.getElementById('fb_btn').value)" />
+<input type="button" value="Reddit" id="reddit_btn" onclick="store(document.getElementById('reddit_btn').value)" />
+<input type="button" value="Twitter" id="twtr_btn" onclick="store(document.getElementById('twtr_btn').value)" />
+<input type="button" value="LinkedIn" id="linkedin_btn" onclick="store(document.getElementById('linkedin_btn').value)" />
+<input type="button" value="Skype" id="skype_btn" onclick="store(document.getElementById('skype_btn').value)" />
+<input type="button" value="Gmail" id="gmail_btn" onclick="store(value)" />
+<input type="button" value="WhatsApp" id="wp_btn" onclick="store(document.getElementById('wp_btn').value)" />
+<input type="button" value="Pinterest" id="pintrest_btn" onclick="store(document.getElementById('pintrest_btn').value)" />
+
+
+<script>
+    function store(selected_option) {
+        <!--Getting Feed ID which is to be sent-->
+        var feedId = sessionStorage.getItem("feedId");
+
+        location.href = "/shareOnSP/" + selected_option + "/" + feedId;
+    }
+</script>
+}
