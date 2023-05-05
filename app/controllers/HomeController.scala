@@ -28,6 +28,7 @@ class HomeController @Inject()(val socialShareServices: SocialShareServices, val
       case "Gmail" => socialShareServices.postOnGmail(feedDetails.imgUrl, feedDetails.feedDesc)
       case "WhatsApp" => socialShareServices.postOnWhatsApp(feedDetails.imgUrl, feedDetails.feedDesc)
       case "Pinterest" => socialShareServices.postOnPinterest(feedDetails.imgUrl, feedDetails.feedDesc)
+      case _ => BadRequest("Not a valid Social platform")
     }
   }
 }

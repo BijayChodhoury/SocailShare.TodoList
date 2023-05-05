@@ -11,3 +11,12 @@ GET     /assets/*file                                       controllers.Assets.v
 
 GET     /popup                                              controllers.HomeController.popup()
 GET     /shareOnSP/:selected_option/:feedId                 controllers.HomeController.shareOnSP(selected_option: String, feedId: Int)
+
+
+
+##################
+GET     /test              controllers.BirthDayController.testing()
+GET     /getFile            controllers.BirthDayController.fileWithName()
+##################
+# TODO LIST Routes
+GET     /createList             controllers.TodoProjectController.createList()
